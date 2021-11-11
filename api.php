@@ -48,21 +48,21 @@ if ( $lot_active && strpos($email, '@') ) {
 
           // Email
           $subject = "Sorteo Curso React PRO";
-          $message = '<html><body style="background-color: #f0f0f0">';
-          $message .= '<div style="background-color: #ffffff; color: #000000; font-size: 18px !important; margin: 10px auto 5px auto; display: block; width: 46%; padding: 2%;">';
+          $message = '<html><body style="background-color: #f0f0f0; padding-top: 20px">';
+          $message .= '<div style="background-color: #ffffff; color: #000000; font-size: 18px !important; margin: 0 auto; display: block; width: 46%; padding: 2%;">';
           $message .= '<img src="https://hablemosdecodigo.com/wp-content/uploads/2021/10/logo-web-1.png" alt="Hablemos de Código" height="50" style="margin: 0 auto; display: block;" />';
           $message .= '<h2>'.$subject.'</h2>';
           $message .= '<p>Ya estás participando en el sorteo.</p>';
           $message .= '<p>¡Mucha suerte!.</p>';
           $message .= '</div>';
           $message .= '<div style="text-align: center">';
-          $message .= '<p style="font-size: 12px; color: #aaaaaa;">';
+          $message .= '<p style="font-size: 12px; color: #aaaaaa; margin-bottom: 20px">';
           $message .= 'Hablemos de Código es el único responsable por las entrega de los premios.<br />Powered by <a href="https://codify.com.co" style="color: #333 !important">Codify Agency</a>';
           $message .= '</p></div>';
           $message .= '</body></html>';
           $headers = "From: noreply@hablemosdecodigo.com\r\n";
           $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
-          $headers .= "CC: hablemosdecodigo+sorteo@gmail.com\r\n";
+          $headers .= "CCO: hablemosdecodigo+sorteo@gmail.com\r\n";
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
