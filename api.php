@@ -103,7 +103,7 @@ function sendEmail() {
   $message .= '</div>';
   $message .= '<div style="text-align: center">';
   $message .= '<p style="font-size: 12px; color: #999999 !important;">';
-  $message .= 'Hablemos de Código es el único responsable de las entrega de premios.<br />Powered by <a href="https://codify.com.co" style="color: #555555 !important">Codify Agency</a>';
+  $message .= 'Hablemos de Código es el único responsable de la entrega de premios.<br />Powered by <a href="https://codify.com.co" style="color: #555555 !important">Codify Agency</a>';
   $message .= '</p></div>';
   $message .= '</body></html>';
 
