@@ -47,7 +47,7 @@ if ( $lot_active && strpos($email, '@') ) {
           $stmt->execute();
 
           // Email
-          sendEmail();
+          sendEmail($email_filtered);
 
           echo json_encode(array(
             "status" => "success"
@@ -89,7 +89,7 @@ function validateDomainEmail($domain) {
   return $domain === 'gmail.com' ? true : ($domain === 'hotmail.com' ? true : ($domain ===  'yahoo.com' ? true : ($domain === 'live.com' ? true : ($domain === 'ymail.com' ? true : ($domain ==='outlook.com' ? true : ($domain === 'outlook.es' ? true : false))))));
 }
 
-function sendEmail() {
+function sendEmail($email) {
   $subject = "Sorteo Curso React PRO";
 
   $message = '<html><body style="background-color: #f0f0f0 !important; padding: 20px 0px">';
@@ -112,5 +112,5 @@ function sendEmail() {
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-  mail($email_filtered, $subject, $message, $headers);
+  mail($email, $subject, $message, $headers);
 }
