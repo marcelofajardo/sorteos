@@ -104,7 +104,7 @@ function sendEmail($email) {
   $message .= 'Hablemos de Código es el único responsable de la entrega de premios.<br />Powered by <a href="https://codify.com.co" style="color: #555555 !important">Codify Agency</a>';
   $message .= '</p></div></body></html>';
 
-  $headers = "From: noreply@hablemosdecodigo.com\r\n";
+  $headers = "From: Hablemos de Código <noreply@hablemosdecodigo.com>\r\n";
   $headers .= "BCC: hablemosdecodigo+sorteo@gmail.com\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
