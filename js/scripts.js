@@ -10,7 +10,10 @@ button.addEventListener("click", function() {
       email: userEmail.value
   };
 
-  if ( userEmail.value !== '' ) {
+  if ( userEmail.value !== '' && userEmail.value.indexOf('@') > -1 ) {
+    button.innerHTML = 'Inscribiendo...';
+    userEmail.classList.remove("error");
+
     if ( topBar.classList.contains("success") ) {
       topBar.classList.remove("success", "show");
     } else if ( topBar.classList.contains("error") ) {
@@ -32,21 +35,29 @@ button.addEventListener("click", function() {
         case 'success':
           document.querySelector("#msg").innerHTML = "Te has registrado satisfactoriamente. Gracias por participar.";
           topBar.classList.add("success", "show");
+          userEmail.setAttribute('disabled', true);
+          button.setAttribute('disabled', true);
+          button.innerHTML = 'Inscrito';
           break;
 
         case 'error':
-          document.querySelector("#msg").innerHTML = "Ha ocurrido un error registrando tu inscripción, por favor intentalo nuevamente.";
+          document.querySelector("#msg").innerHTML = "Ha ocurrido un error con tu inscripción, por favor inténtalo nuevamente.";
           topBar.classList.add("error", "show");
+          button.innerHTML = 'Inscribirme';
           break;
 
         case 'registered':
           document.querySelector("#msg").innerHTML = "Ya te has registrado anteriormente. Gracias por participar.";
           topBar.classList.add("error", "show");
+          userEmail.setAttribute('disabled', true);
+          button.setAttribute('disabled', true);
+          button.innerHTML = 'Inscrito';
           break;
 
         case 'invalid':
-          document.querySelector("#msg").innerHTML = "Revisa si has ingresado un correo válido e intentalo de nuevo.";
+          document.querySelector("#msg").innerHTML = "Revisa que el correo ingresado sea válido e intentalo de nuevo.";
           topBar.classList.add("warning", "show");
+          button.innerHTML = 'Inscribirme';
           break;
       
         default:
@@ -56,6 +67,9 @@ button.addEventListener("click", function() {
     .catch(() => {
       document.querySelector("#msg").innerHTML = "Ha ocurrido un error registrando tu inscripción, por favor intentalo nuevamente.";
       topBar.classList.add("error", "show");
+      button.innerHTML = 'Inscribirme';
     });
+  } else {
+    userEmail.classList.add("error");
   }
 })
