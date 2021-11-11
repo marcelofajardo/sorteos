@@ -98,14 +98,11 @@ function sendEmail($email) {
   $message .= '<img src="https://hablemosdecodigo.com/wp-content/uploads/2021/10/logo-web-1.png" alt="Hablemos de Código" height="50" />';
   $message .= '</a>';
   $message .= '<h2>'.$subject.'</h2>';
-  $message .= '<p>Ya estás participando en el sorteo.<br />';
-  $message .= '¡Mucha suerte!.</p>';
-  $message .= '</div>';
+  $message .= '<p>Ya estás participando en el sorteo.<br />¡Mucha suerte!</p></div>';
   $message .= '<div style="text-align: center">';
   $message .= '<p style="font-size: 12px; color: #999999 !important;">';
   $message .= 'Hablemos de Código es el único responsable de la entrega de premios.<br />Powered by <a href="https://codify.com.co" style="color: #555555 !important">Codify Agency</a>';
-  $message .= '</p></div>';
-  $message .= '</body></html>';
+  $message .= '</p></div></body></html>';
 
   $headers = "From: noreply@hablemosdecodigo.com\r\n";
   $headers .= "BCC: hablemosdecodigo+sorteo@gmail.com\r\n";
