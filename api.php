@@ -82,5 +82,5 @@ function registeredEmail($conn, $email, $lot) {
 }
 
 function validateDomainEmail($domain) {
-  return $domain === 'gmail.com' ? true : ($domain === 'hotmail.com' ? true : ($domain ===  'yahoo.com' ? true : ($domain === 'live.com' ? true : ($domain === 'ymail.com' ? true : ($domain ==='outlook.com ? true : ($domain === 'outlook.es' ? true : false))))));
+  return $domain === 'gmail.com' ? true : ($domain === 'hotmail.com' ? true : ($domain ===  'yahoo.com' ? true : ($domain === 'live.com' ? true : ($domain === 'ymail.com' ? true : ($domain ==='outlook.com' ? true : ($domain === 'outlook.es' ? true : false))))));
 }
