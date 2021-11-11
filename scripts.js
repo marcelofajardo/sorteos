@@ -19,7 +19,7 @@ button.addEventListener("click", function() {
       topBar.classList.remove("warning", "show");
     }
 
-    fetch('http://localhost/sorteos/api.php', {
+    fetch('https://sorteos.hablemosdecodigo.com/api.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
