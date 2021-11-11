@@ -62,7 +62,7 @@ if ( $lot_active && strpos($email, '@') ) {
           $message .= '</body></html>';
           $headers = "From: noreply@hablemosdecodigo.com\r\n";
           $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
-          $headers .= "CCO: hablemosdecodigo+sorteo@gmail.com\r\n";
+          $headers .= "BBC: hablemosdecodigo+sorteo@gmail.com\r\n";
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
