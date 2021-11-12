@@ -1,6 +1,8 @@
 "use strict";
 
-if ( !lotActive ) {
+const la = true; // Sorteo activo
+
+if ( !la ) {
   document.querySelector("#title").innerHTML = "Sorteo no disponible";
   document.querySelector("#headline").innerHTML = "En el momento no hay sorteo activo, pero puedes seguirnos en nuestras redes sociales para más contenido y conocer los nuevos sorteos.";
 
