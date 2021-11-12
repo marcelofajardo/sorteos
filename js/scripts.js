@@ -1,5 +1,20 @@
 "use strict";
 
+if ( !lotActive ) {
+  document.querySelector("#title").innerHTML = "Sorteo no disponible";
+  document.querySelector("#headline").innerHTML = "En el momento no hay sorteo activo, pero puedes seguirnos en nuestras redes sociales para más contenido y conocer los nuevos sorteos.";
+
+  document.querySelector("#form").remove();
+  document.querySelector("#disclaimer").remove();
+
+  const followLink = document.createElement('div')
+  followLink.classList.add("mt-4");
+  followLink.innerHTML = `<a href="https://followlink.co/@hablemosdecodigo" class="btn btn-dark" target="_blank" rel="noopenner">Síguenos en redes</a>`;
+  document.querySelector(".col-form").append(followLink);
+
+  document.querySelector("#img").setAttribute("src", "img/lot-unavailable.jpeg");
+}
+
 const button = document.querySelector("#register");
 
 button.addEventListener("click", function() {
